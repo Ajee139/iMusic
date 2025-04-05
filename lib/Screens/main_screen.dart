@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:imusic/consts/colors.dart';
 import 'package:imusic/Screens/home.dart';
 import 'package:imusic/Screens/library.dart';
 import 'package:imusic/Screens/player.dart';

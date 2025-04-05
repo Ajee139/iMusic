@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:imusic/controllers/playerController.dart';
-import 'package:imusic/models/playlist.dart';
 
 class AddToPlaylistDialog extends StatelessWidget {
   final String songId;

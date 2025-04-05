@@ -172,7 +172,7 @@ class Home extends StatelessWidget {
             ),
           ),
           // Bottom player
-          Positioned(
+          const Positioned(
             left: 0,
             right: 0,
             bottom: 0,

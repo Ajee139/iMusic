@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:imusic/consts/colors.dart';
-import 'package:on_audio_query/on_audio_query.dart';
 import 'package:imusic/Screens/all_songs.dart';
 import 'package:imusic/Screens/recently_added.dart';
 import 'package:imusic/Screens/most_played.dart';

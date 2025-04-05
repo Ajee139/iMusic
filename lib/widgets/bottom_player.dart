@@ -13,7 +13,7 @@ class BottomPlayer extends StatelessWidget {
     var controller = Get.find<PlayerController>();
     
     return Obx(() {
-      if (!controller.isPlaying.value) return SizedBox.shrink();
+      if (!controller.isPlaying.value) return const SizedBox.shrink();
       
       return GestureDetector(
         onTap: () {
@@ -32,7 +32,7 @@ class BottomPlayer extends StatelessWidget {
               BoxShadow(
                 color: Colors.black.withOpacity(0.2),
                 blurRadius: 8,
-                offset: Offset(0, -2),
+                offset: const Offset(0, -2),
               ),
             ],
           ),
@@ -41,7 +41,7 @@ class BottomPlayer extends StatelessWidget {
               Container(
                 width: 60,
                 height: 60,
-                margin: EdgeInsets.all(5),
+                margin: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   color: bgColor,
                   borderRadius: BorderRadius.circular(8),
@@ -49,7 +49,7 @@ class BottomPlayer extends StatelessWidget {
                 child: QueryArtworkWidget(
                   id: controller.playIndex.value,
                   type: ArtworkType.AUDIO,
-                  nullArtworkWidget: Icon(
+                  nullArtworkWidget: const Icon(
                     Icons.music_note,
                     color: whiteColor,
                   ),
@@ -62,7 +62,7 @@ class BottomPlayer extends StatelessWidget {
                   children: [
                     Text(
                       controller.currentSong.value,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: whiteColor,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -103,7 +103,7 @@ class BottomPlayer extends StatelessWidget {
                     onPressed: () {
                       controller.stopSong();
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.close,
                       color: whiteColor,
                     ),

@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter/services.dart';
 import 'dart:convert';
 import '../models/song_bookmark.dart';
 import '../models/playlist.dart';
@@ -32,7 +31,8 @@ class PlayerController extends GetxController {
 
   // Bookmark management
   var bookmarks = <String, SongBookmark>{}.obs;
-  var currentBookmarks = <String, int>{}.obs;
+  RxMap<String, int> currentBookmarks = <String, int>{}.obs;
+  // var currentBookmarks = <String, int>{}.obs;
   var isAddingBookmark = false.obs;
   var newBookmarkName = ''.obs;
 
@@ -99,6 +99,8 @@ class PlayerController extends GetxController {
     }
   }
 
+  
+
   Future<void> loadBookmarks() async {
     try {
       final prefs = await SharedPreferences.getInstance();
@@ -131,6 +133,7 @@ class PlayerController extends GetxController {
     } else {
       currentBookmarks.value = {};
     }
+    currentBookmarks.refresh();
   }
 
   void addBookmark(String name) {
